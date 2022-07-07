@@ -78,26 +78,35 @@ class RestaurantDetailPage extends StatelessWidget {
                   ),
                   Row(
                     children: [
+                      Spacer(flex: 1),
                       Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "Foods List",
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w600),
+                                fontSize: 15, fontWeight: FontWeight.w500),
+                          ),
+                          SingleChildScrollView(
+                            child: Column(children: [
+                              ListView(children: [Text(restaurant.name)])
+                            ]),
                           ),
                         ],
                       ),
-                      Spacer(),
+                      Spacer(flex: 2),
                       Column(
                         children: [
                           Text(
                             "Drinks List",
                             style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w600),
+                                fontSize: 15, fontWeight: FontWeight.w500),
                           ),
+                          Text("Data 1"),
                         ],
-                     ),
+                      ),
+                      Spacer(
+                        flex: 1,
+                      )
                     ],
                   ),
                 ],
