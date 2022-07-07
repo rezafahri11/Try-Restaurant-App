@@ -34,15 +34,25 @@ class RestaurantDetailPage extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Column(
-                        children: [Icon(Icons.pin_drop), Text(restaurant.city)],
+                      Spacer(),
+                      Center(
+                        child: Column(
+                          children: [
+                            Icon(Icons.pin_drop),
+                            Text(restaurant.city)
+                          ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Icon(Icons.star),
-                          Text(restaurant.rating.toString()),
-                        ],
+                      Spacer(),
+                      Center(
+                        child: Column(
+                          children: [
+                            Icon(Icons.star),
+                            Text(restaurant.rating.toString()),
+                          ],
+                        ),
                       ),
+                      Spacer(),
                     ],
                   ),
                   Divider(
@@ -50,11 +60,49 @@ class RestaurantDetailPage extends StatelessWidget {
                   ),
                   Text(
                     "Description",
-                    style: TextStyle(fontSize: 12),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                  ),
+                  Divider(
+                    color: Colors.grey,
+                  ),
+                  Text(
+                    restaurant.description,
+                    style: TextStyle(fontSize: 15),
+                  ),
+                  Divider(color: Colors.grey),
+                  Text("Menus",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  Divider(
+                    color: Colors.grey,
+                  ),
+                  Row(
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Foods List",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w600),
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      Column(
+                        children: [
+                          Text(
+                            "Drinks List",
+                            style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                          ),
+                        ],
+                     ),
+                    ],
                   ),
                 ],
               ),
-            ),
+            )
           ],
         ),
       ),
